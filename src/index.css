@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream-50: #faf9f6;
+  --color-cream-100: #f8f6f1;
+  --color-cream-200: #f0eeea;
+  --color-cream-300: #e2dfd8;
+  --color-ink: #1a1a18;
+  --color-ink-light: #5c5a54;
+  --color-ink-muted: #9e9b93;
+  --color-teal-600: #1a6b5a;
+  --color-teal-700: #155a4b;
+  --color-teal-800: #0f4a3c;
+  --color-gold-600: #b8860b;
+  --font-family-mono: "SF Mono", "Cascadia Code", "Fira Code", "Source Code Pro", "Consolas", monospace;
+}
+
+body {
+  font-family: var(--font-family-mono);
+  background: var(--color-cream-100);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Sidebar scrollbar */
+.sidebar-scroll::-webkit-scrollbar { width: 4px; }
+.sidebar-scroll::-webkit-scrollbar-track { background: transparent; }
+.sidebar-scroll::-webkit-scrollbar-thumb { background: var(--color-cream-300); border-radius: 2px; }
+
+/* Smooth transitions for sidebar items */
+.sidebar-item {
+  transition: all 0.15s ease;
+}
+
+/* Code block overrides for react-syntax-highlighter */
+.code-block pre {
+  border-radius: 8px !important;
+  border: 1px solid var(--color-cream-300) !important;
+  font-size: 0.82rem !important;
+  line-height: 1.7 !important;
+  margin: 0 !important;
+}
